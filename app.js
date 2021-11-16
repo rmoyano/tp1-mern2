@@ -5,7 +5,8 @@ const countries = require('./countries.json');
  * @returns {Object}
  */
 function getCountryByIso3(isoCode){
-    //Complete with your code
+    const filtered = countries.filter(a => a.iso3 == isoCode);
+    return filtered.pop();
 }
 
 /**
@@ -15,7 +16,8 @@ function getCountryByIso3(isoCode){
  * @returns {string}
  */
 function getCountryTranslatedName(isoCode, language){
-    //Complete with your code
+    const filtered2 = countries.filter(a => a.iso3 == isoCode);
+    return filtered2[0]["translations"][language];
 }
 /**Get an array of all the countries with the specified subregion
  * @param  {string} subregion
@@ -23,6 +25,8 @@ function getCountryTranslatedName(isoCode, language){
  */
 function getCountriesBySubregion(subregion){
     //Complete with your code
+    const filtered3 = countries.filter(a => a.subregion == subregion);
+    return filtered3;   
 }
 
 function main() {
@@ -38,7 +42,6 @@ function main() {
         '///// Ejercicio 3 /////\n',
         getCountriesBySubregion('South America'),
         '\n');
-
 }
 
 main();
