@@ -5,8 +5,7 @@ const countries = require('./countries.json');
  * @returns {Object}
  */
 function getCountryByIso3(isoCode){
-    const filtered = countries.filter(a => a.iso3 == isoCode);
-    return filtered;
+    //Complete with your code
 }
 
 /**
@@ -31,14 +30,15 @@ function main() {
         '///// Ejercicio 1 /////\n',
         getCountryByIso3('ARG'),
         '\n');
-    //console.log(
-    //    '///// Ejercicio 2 /////\n',
-    //    getCountryTranslatedName('ARG', 'ja'),
-    //    '\n');
-    //console.log(
-    //    '///// Ejercicio 3 /////\n',
-    //    getCountriesBySubregion('South America'),
-    //    '\n');
+    console.log(
+        '///// Ejercicio 2 /////\n',
+        getCountryTranslatedName('ARG', 'ja'),
+        '\n');
+    console.log(
+        '///// Ejercicio 3 /////\n',
+        getCountriesBySubregion('South America'),
+        '\n');
+
 }
 
 main();
